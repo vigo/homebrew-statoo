@@ -12,6 +12,6 @@ class Statoo < Formula
   end
 
   test do
-    assert_match "1.0.1", shell_output("#{bin}/statoo -version 2>&1", 2)
+    assert_equal "1.0.1", shell_output("#{bin}/statoo -version 2>&1", 0).strip
   end
 end
