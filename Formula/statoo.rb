@@ -5,6 +5,12 @@ class Statoo < Formula
   sha256 "55ed965ae1cc117b9a8a1ce4b8712762b1ae6fe316a434bc22696484eb55c6c7"
   license "MIT"
 
+  bottle do
+    root_url "https://github.com/vigo/homebrew-statoo/releases/download/statoo-1.1.0"
+    sha256 cellar: :any_skip_relocation, catalina:     "befb6d69dbd6f5c5f24ed0ea334132f087c130af76c1c0a1579586979994998c"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "fa583fc2d4b4b059ad296591e26a24284201cf5a74c01d5786ffb7aa5f4b93f8"
+  end
+
   depends_on "go" => :build
 
   def install
