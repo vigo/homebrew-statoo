@@ -3,7 +3,7 @@
 
 # Brew Tap for `statoo`
 
-Install latest version of [statoo](https://github.com/vigo/statoo)
+Install latest version (**v1.1.0**) of [statoo](https://github.com/vigo/statoo)
 
 ```bash
 $ brew tap vigo/statoo
