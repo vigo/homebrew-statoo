@@ -1,8 +1,8 @@
 class Statoo < Formula
   desc "`statoo` is a super simple http GET tool for checking site health"
   homepage "https://github.com/vigo/statoo"
-  url "https://github.com/vigo/statoo/archive/refs/tags/v1.0.1.tar.gz"
-  sha256 "9188474d779832c37d6d67a853d25a0cd25b6c5f8270e20b5b46e533378ee6a4"
+  url "https://github.com/vigo/statoo/archive/refs/tags/v1.1.0.tar.gz"
+  sha256 "55ed965ae1cc117b9a8a1ce4b8712762b1ae6fe316a434bc22696484eb55c6c7"
   license "MIT"
 
   depends_on "go" => :build
@@ -12,6 +12,10 @@ class Statoo < Formula
   end
 
   test do
-    assert_equal "1.0.1", shell_output("#{bin}/statoo -version 2>&1", 0).strip
+    require "open3"
+    Open3.popen3("#{bin}/statoo", "-version") do |stdin, stdout, _|
+      stdin.close
+      assert_equal "1.1.0", stdout.read.strip
+    end
   end
 end
