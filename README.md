@@ -6,9 +6,11 @@
 Install latest version of [statoo](https://github.com/vigo/statoo)
 
 ```bash
-$ brew install vigo/statoo/statoo
+brew install vigo/statoo/statoo
+```
 
-# or
-$ brew tap vigo/statoo
-$ brew install statoo
+or;
+
+```bash
+brew tap vigo/statoo && brew install statoo
 ```
