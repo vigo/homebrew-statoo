@@ -6,9 +6,9 @@ class Statoo < Formula
   license "MIT"
 
   bottle do
-    root_url "https://github.com/vigo/homebrew-statoo/releases/download/statoo-1.2.3"
-    sha256 cellar: :any_skip_relocation, catalina:     "27559ed8d83e87ca7c41577010ea9306424c1582734051ab99a8a9ebc24f7fd0"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "3bad3590f5006b74eddf79293dfe3c1c70bb870eb56e4494c9605bde8b64dded"
+    root_url "https://github.com/vigo/homebrew-statoo/releases/download/statoo-1.3.0"
+    sha256 cellar: :any_skip_relocation, big_sur:      "3aaabf9ec867f18df0cf9986d8221fc9b6336e323f6bd92b46bab9ea418d9553"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "7671eee2247796c86b6c6b433adad0198e09e50a431bef44929b38ad0655192a"
   end
 
   depends_on "go" => :build
