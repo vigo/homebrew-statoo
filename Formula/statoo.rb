@@ -1,8 +1,8 @@
 class Statoo < Formula
   desc "`statoo` is a super simple http GET tool for checking site health"
   homepage "https://github.com/vigo/statoo"
-  url "https://github.com/vigo/statoo/archive/refs/tags/v2.0.0.tar.gz"
-  sha256 "ba0e576f921768e31cae5a3f0fe603b8ecb89debc87651c1fc117d6e779e378e"
+  url "https://github.com/vigo/statoo/archive/refs/tags/v2.0.1.tar.gz"
+  sha256 "2628d780c584f4e3da588199c2531f0335e29457b0ee28e1ad75632fc5a67b31"
   license "MIT"
 
   bottle do
@@ -15,14 +15,14 @@ class Statoo < Formula
 
   def install
     system "go", "build", *std_go_args
-    (bash_completion/"statoo").write `#{bin}/statoo bash-completion`
+    generate_completions_from_executable(bin/"statoo", "bash-completion", "completions", shells: [:bash])
   end
 
   test do
     require "open3"
     Open3.popen3("#{bin}/statoo", "-version") do |stdin, stdout, _|
       stdin.close
-      assert_equal "2.0.0", stdout.read.strip
+      assert_equal "2.0.1", stdout.read.strip
     end
   end
 end
