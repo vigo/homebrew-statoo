@@ -15,7 +15,7 @@ class Statoo < Formula
 
   def install
     system "go", "build", *std_go_args
-    (bash_completion/"statoo").write `#{bin}/statoo bash-completion`
+    generate_completions_from_executable(bin/"statoo bash-completion", "completions", shells: [:bash])
   end
 
   test do
