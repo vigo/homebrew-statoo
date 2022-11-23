@@ -1,8 +1,8 @@
 class Statoo < Formula
   desc "`statoo` is a super simple http GET tool for checking site health"
   homepage "https://github.com/vigo/statoo"
-  url "https://github.com/vigo/statoo/archive/refs/tags/v2.0.1.tar.gz"
-  sha256 "2628d780c584f4e3da588199c2531f0335e29457b0ee28e1ad75632fc5a67b31"
+  url "https://github.com/vigo/statoo/archive/refs/tags/v2.0.2.tar.gz"
+  sha256 "053b8421b57d95a3b095df3815507e76a2555e0987eb1630665276eda33f59ea"
   license "MIT"
 
   bottle do
@@ -22,7 +22,7 @@ class Statoo < Formula
     require "open3"
     Open3.popen3("#{bin}/statoo", "-version") do |stdin, stdout, _|
       stdin.close
-      assert_equal "2.0.1", stdout.read.strip
+      assert_equal "2.0.2", stdout.read.strip
     end
   end
 end
