@@ -7,8 +7,9 @@ class Statoo < Formula
 
   bottle do
     root_url "https://github.com/vigo/homebrew-statoo/releases/download/statoo-2.0.2"
-    sha256 cellar: :any_skip_relocation, big_sur:      "9420ada430bf4ef1ec95a96c2f3968521cd4e6dccb551fc6267d848af8d4a0f1"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "9073dfa249d8c353616e72adcc087931d095c6686e3624ae2e7e039368a00207"
+    rebuild 1
+    sha256 cellar: :any_skip_relocation, big_sur:      "90fe5b679a3716bd623dc80202efc7fedf8cb3e82bcdf50362b01c9eb810d89b"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "a826d60a2eff9ac9defe1d64d61e7e4e02b593e12652af7627e4298ae298d741"
   end
 
   depends_on "go" => :build
