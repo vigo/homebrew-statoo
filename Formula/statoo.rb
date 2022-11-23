@@ -14,7 +14,7 @@ class Statoo < Formula
   depends_on "go" => :build
 
   def install
-    system "go", "build", *std_go_args
+    system "go", "build", *std_go_args, "-ldflags", "-X 'github.com/vigo/statoo/app/version.CommitHash=7f1cc311eb1435a02c7110b52a628bbc91ffbeba'"
     generate_completions_from_executable(bin/"statoo", "bash-completion", "completions", shells: [:bash])
   end
 
